@@ -10,11 +10,38 @@ import Familia from './components/basicos/Familia'
 import FamiliaMembro from "./components/basicos/FamiliaMembro"
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
+import Input from './components/formulario/Input'
+import Contador from './components/contador/Contador'
+import Mega from './components/mega/Mega'
 
 export default _ => (
     <div className="App">
         <h1>Fundamentos React</h1>
         <div className='Cards'>
+            <Card titulo="#13 - Desafio Mega" color="#58E">
+                <Mega qtd={8}></Mega>
+            </Card>
+            <Card titulo="#12 - Contador" color="#EF0">
+                <Contador numeroInicial={10}></Contador>
+            </Card>
+            <Card titulo="#11 - Componente Controlado" color="#EAF">
+                <Input></Input>
+            </Card>
+            <Card titulo="#10 - Comunicação Indireta" color="#00F">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+            <Card titulo="#09 - Comunicação Direta" color="#0F0">
+                <DiretaPai></DiretaPai>
+            </Card>
+            <Card titulo="#08 - Renderização condicional" color="#F00">
+                <ParOuImpar numero={21} />
+                <UsuarioInfo usuario={{nome:'Fernando'}} />
+                <UsuarioInfo usuario={{email:'fer@email.com'}} />
+            </Card>
             <Card titulo="#07 - Repetição - Tabela Produtos" color="#888">
                 <TabelaProdutos />
             </Card>
